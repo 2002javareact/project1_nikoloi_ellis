@@ -77,9 +77,16 @@ handleSubmit = async (e: SyntheticEvent) => {
       <Form.Control  onChange={this.handleStatus}  type="number" placeholder= "Type in an Reimbursement ID" /> 
   
     </Form.Group>
+       0 is Pending 
+       1 is Approved
+       2 is Denied
     <Button variant="primary" type="submit">
   Submit
 </Button>
+
+  0 is Pending 
+       1 is Approved
+       2 is Denied
     </Form>
           </div>
       )

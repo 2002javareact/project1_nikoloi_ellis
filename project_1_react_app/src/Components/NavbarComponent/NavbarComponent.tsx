@@ -19,7 +19,7 @@ export class NavbarComponent extends React.Component<any,any> {
     <Nav className="mr-auto">
    
       <Nav.Link ><Link to="/">Home</Link></Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+      <NavDropdown title="All Links" id="basic-nav-dropdown">
        
         <NavDropdown.Item> <Link to="/sendReimbursements">Send Reimbursements</Link></NavDropdown.Item>
         

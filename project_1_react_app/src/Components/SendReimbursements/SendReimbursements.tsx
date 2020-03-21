@@ -11,13 +11,13 @@ export class SendReimbursements extends React.Component<any,any>{
     super(props)
     this.state = {
       reimbursementId: 0,
-      author: 3,
+      author: 1,
       amount:0,
       datesubmitted:0,
       dateresolved:0,
       description: '',
-      resolver: 0,
-      status: 0,
+      resolver: 1,
+      status: 1,
       type: 0
     }
 
@@ -132,12 +132,11 @@ export class SendReimbursements extends React.Component<any,any>{
     <Form.Control onChange={this.handleDescription} as="textarea" rows="3" />
   </Form.Group>
 
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Resolver</Form.Label>
-    <Form.Control onChange={this.handleResolver} type="number" placeholder="name@example.com" />
-  </Form.Group>
 
-
+ Types of Reimbursements 0 - Lodging
+                          1 - Travel 
+                          2 - Food
+                          3 - Other
 
   <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Type of Reimbursement</Form.Label>

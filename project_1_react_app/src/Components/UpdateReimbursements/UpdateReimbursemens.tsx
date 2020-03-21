@@ -27,6 +27,11 @@ export class UpdateReimbursemens extends Component<any,any> {
         this.setState({ reimbursementId: parseInt(e.target.value)})
         
       }
+      handleAuthor = async(e: any) =>
+      {
+        this.setState({ author: parseInt(e.target.value)})
+        
+      }
       handleAmount = async(e: any) =>
       {
        this.setState({amount: parseInt(e.target.value)})
@@ -111,6 +116,7 @@ export class UpdateReimbursemens extends Component<any,any> {
       
     
         render(){
+            
             return(
                 <Form onSubmit={this.handleSubmit}>
 
@@ -121,7 +127,10 @@ export class UpdateReimbursemens extends Component<any,any> {
         <Form.Label>ReimbursementID</Form.Label>
         <Form.Control onChange={this.handleRemId} type="number" placeholder="ReimbursementID" />
       </Form.Group>
-    
+      <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Author</Form.Label>
+        <Form.Control onChange={this.handleAuthor} type="number" placeholder="name@example.com" />
+      </Form.Group>
         {/*Data needed is author the author should be the current user logged in rtn */ }
       <Form.Group controlId="exampleForm.ControlInput1">
         <Form.Label>Amount</Form.Label>

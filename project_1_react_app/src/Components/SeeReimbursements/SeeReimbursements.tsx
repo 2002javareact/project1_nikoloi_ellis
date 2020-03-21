@@ -75,8 +75,12 @@ export class SeeReimbursements extends React.Component<ISeeRemProps,any>{
         
          {generateTablesArray}
          
+      
           <Button  onClick={this.handleSubmit} variant="primary">Press To See Reimbursements</Button>
 
+          0 is Pending 
+       1 is Approved
+       2 is Denied
           </div>
           )
     }

@@ -1,7 +1,9 @@
 import React, { SyntheticEvent } from 'react';
 import axios from 'axios';
-import { Form, Button, Col} from 'react-bootstrap';
+//import { Form, Button, Col} from 'react-bootstrap';
 import { Redirect } from 'react-router';
+
+import '../../assets/Loginstyle.css';
 
 
 
@@ -96,7 +98,7 @@ interface ILoginState {
   
   
     render(){
-
+      
     
   return (
     /*TODO: This component should be responsible for rendering out the Navbar component and sending 
@@ -107,39 +109,56 @@ interface ILoginState {
     <Redirect to='/'
     /> : 
 
-          <Form onSubmit={this.handleSubmit}>
+
+    
+//           <Form onSubmit={this.handleSubmit}>
       
      
    
   
-  <Form.Group  controlId="formBasicEmail">
-  <Col sm={6}>
-    <Form.Label>Username</Form.Label>
-    </Col>
-    <Col sm={6}>
-    <Form.Control onChange={this.handleUsername} type="text" placeholder="Enter username now!" /> 
-    <Form.Text className="text-muted">
-      We'll never share your username with anyone else.
-    </Form.Text>
-    </Col>
-  </Form.Group>
-  <Col sm={6}>
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-     <Form.Control onChange={this.handlePassword} type="password" placeholder="Password" /> 
-  </Form.Group>
-  </Col> 
-  <Col sm={6}>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
+//   <Form.Group  controlId="formBasicEmail">
+//   <Col sm={6}>
+//     <Form.Label>Username</Form.Label>
+//     </Col>
+//     <Col sm={6}>
+//     <Form.Control onChange={this.handleUsername} type="text" placeholder="Enter username now!" /> 
+//     <Form.Text className="text-muted">
+//       We'll never share your username with anyone else.
+//     </Form.Text>
+//     </Col>
+//   </Form.Group>
+//   <Col sm={6}>
+//   <Form.Group controlId="formBasicPassword">
+//     <Form.Label>Password</Form.Label>
+//      <Form.Control onChange={this.handlePassword} type="password" placeholder="Password" /> 
+//   </Form.Group>
+//   </Col> 
+//   <Col sm={6}>
+//   <Form.Group controlId="formBasicCheckbox">
+//     <Form.Check type="checkbox" label="Check me out" />
+//   </Form.Group>
   
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-  </Col>
-</Form>
-        
+//   <Button variant="primary" type="submit">
+//     Submit
+//   </Button>
+//   </Col>
+// </Form> 
+
+<div className="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 className="active"> Sign In </h2>
+    <h2 className="inactive underlineHover">Sign Up </h2>
+    <form  onSubmit={this.handleSubmit}>
+      <input onChange={this.handleUsername} type="text" id="login" className="fadeIn second" name="login" placeholder="login" required/>
+      <input  onChange={this.handlePassword} type="text" id="password" className="fadeIn third" name="login" placeholder="password"/>
+      <input type="submit" className="fadeIn fourth" value="Log In"/>
+    </form>
+
+  </div>
+</div>
+
+
+
     );
   };
 }

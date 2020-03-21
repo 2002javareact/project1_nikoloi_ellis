@@ -31,11 +31,16 @@ class App extends React.Component<any,any> {
       lastname: '',
       email: '',
       userid:0,
-      loggedin:false
+      loggedin:false,
+      role:0
 
     };
   }
  
+
+  componentDidMount() {
+    document.body.style.backgroundColor = '#91CED4'
+}
   //Function for handling parent states
 
     handleStateChanges= (changeUsername:string,

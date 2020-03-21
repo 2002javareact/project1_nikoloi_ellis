@@ -78,9 +78,17 @@ export class SeeReimbursementsById extends React.Component<any,any> {
         <Form.Control  onChange={this.handleUserId}  type="number" placeholder= "Type in an Reimbursement ID" /> 
     
       </Form.Group>
+
+      
       <Button variant="primary" type="submit">
-    Submit
+      
+    See Reimbursements
   </Button>
+
+
+  0 is Pending 
+       1 is Approved
+       2 is Denied
       </Form>
             </div>
         )
